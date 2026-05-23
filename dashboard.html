@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FitFlow - Track Your Journey</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+</head>
+
+<body class="bg-dashboard">
+  <header class="container-fluid py-3 border-bottom bg-white">
+    <div class="d-flex justify-content-between align-items-center">
+
+      
+      <div class="d-flex align-items-center">
+        <button class="btn btn-light me-3 border-0" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#menusamping">
+          <i class="bi bi-list fs-3"></i>
+        </button>
+        
+        <div>
+          <h4 class="mb-0 fw-bold">FitFlow</h4>
+          <small class="text-muted">Track Your Journey</small>
+        </div>
+      </div>
+
+      
+      <button
+        class="btn btn-light border-0 position-relative"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#panelNotifikasi"
+      >
+        <i class="bi bi-bell fs-4"></i>
+        
+        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-white rounded-circle"></span>
+      </button>
+
+    </div>
+  </header>
+
+  
+  <section class="container-fluid mt-4">
+    <div class="row g-4">
+
+      <div class="col-md-6 col-lg-6">
+        <div class="card border border-light shadow-sm rounded-4 mb-3 p-3">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <div class="icon-box text-warning p-2 rounded">
+                <i class="bi bi-activity"></i>
+              </div>
+              <span class="text-success small">+12%</span>
+            </div>
+            <small class="text-muted">Total Jarak</small>
+            <h2 class="fw-bold mb-0">124.8<span class="fs-6 text-muted fw-normal"> km</span></h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6">
+        <div class="card border border-light shadow-sm rounded-4 mb-3 p-3">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <div class="icon-box text-warning p-2 rounded">
+                <i class="bi bi-stopwatch"></i>
+              </div>
+              <span class="text-success small">+8%</span>
+            </div>
+            <small class="text-muted">Total Waktu</small>
+            <h2 class="fw-bold mb-0">18.5<span class="fs-6 text-muted fw-normal"> jam</span></h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6">
+        <div class="card border border-light shadow-sm rounded-4 mb-3 p-3">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <div class="icon-box text-warning p-2 rounded">
+                <i class="bi bi-fire"></i>
+              </div>
+              <span class="text-success small">+15%</span>
+            </div>
+            <small class="text-muted">Kalori Terbakar</small>
+            <h2 class="fw-bold mb-0">4,240<span class="fs-6 text-muted fw-normal"> kcal</span></h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6">
+        <div class="card border border-light shadow-sm rounded-4 mb-3 p-3">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <div class="icon-box text-warning p-2 rounded">
+                <i class="bi bi-award"></i>
+              </div>
+              <span class="text-success small">+3</span>
+            </div>
+            <small class="text-muted">Pencapaian</small>
+            <h2 class="fw-bold mb-0">28<span class="fs-6 text-muted fw-normal"> badges</span></h2>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  
+  <section class="container mt-4 mb-5">
+    <div class="row">
+      <div class="col-12">
+        <div class="card border border-light shadow-sm rounded-4">
+          <div class="card-body p-4">
+            <h5 class="fw-bold mb-4">Aktivitas Mingguan</h5>
+            <div class="chart-container" style="height: 350px; position: relative;">
+              <canvas id="aktivitasChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="menusamping">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title fw-bold">
+        <i class="bi bi-fire text-danger me-2"></i> Menu FitFlow
+      </h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="list-group list-group-flush fs-5">
+        <li class="list-group-item py-3 border-0">
+          <a href="#" class="text-dark text-decoration-none">
+            <i class="bi bi-house-door me-3"></i> Beranda
+          </a>
+        </li>
+        <li class="list-group-item py-3 border-0">
+          <a href="profil.html" class="text-dark text-decoration-none">
+            <i class="bi bi-person me-3"></i> Profil Saya
+          </a>
+        </li>
+        <li class="list-group-item py-3 border-0">
+          <a href="riwayat.html" class="text-dark text-decoration-none">
+            <i class="bi bi-graph-up me-3"></i> Riwayat Latihan
+          </a>
+        </li>
+        <li class="list-group-item py-3 border-0">
+          <a href="pengaturan.html" class="text-dark text-decoration-none">
+            <i class="bi bi-gear me-3"></i> Pengaturan
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="panelNotifikasi">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title fw-bold">
+        <i class="bi bi-bell-fill text-danger me-2"></i> Notifikasi
+      </h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body p-0">
+
+     
+      <div class="d-flex align-items-start gap-3 p-3 border-bottom">
+        <div class="bg-danger bg-opacity-10 text-danger rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width:42px; height:42px;">
+          <i class="bi bi-fire"></i>
+        </div>
+        <div>
+          <p class="fw-semibold mb-0 small">Jangan lupa olahraga hari ini!</p>
+          <small class="text-muted">Target kamu 5 km. Yuk semangat! 💪</small><br>
+          <small class="text-muted fst-italic">Baru saja</small>
+        </div>
+      </div>
+
+    
+      <div class="d-flex align-items-start gap-3 p-3 border-bottom">
+        <div class="bg-success bg-opacity-10 text-success rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width:42px; height:42px;">
+          <i class="bi bi-award"></i>
+        </div>
+        <div>
+          <p class="fw-semibold mb-0 small">Pencapaian baru terbuka!</p>
+          <small class="text-muted">Kamu sudah lari 100 km total. Luar biasa!</small><br>
+          <small class="text-muted fst-italic">2 jam lalu</small>
+        </div>
+      </div>
+
+      
+      <div class="d-flex align-items-start gap-3 p-3 border-bottom">
+        <div class="bg-warning bg-opacity-10 text-warning rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width:42px; height:42px;">
+          <i class="bi bi-graph-up"></i>
+        </div>
+        <div>
+          <p class="fw-semibold mb-0 small">Minggu ini lebih baik dari minggu lalu!</p>
+          <small class="text-muted">Aktivitas kamu naik 12% minggu ini.</small><br>
+          <small class="text-muted fst-italic">1 hari lalu</small>
+        </div>
+      </div>
+
+     
+      <div class="d-flex align-items-start gap-3 p-3">
+        <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width:42px; height:42px;">
+          <i class="bi bi-calendar-check"></i>
+        </div>
+        <div>
+          <p class="fw-semibold mb-0 small">Pengingat: Jadwal lari besok pagi</p>
+          <small class="text-muted">Kamu punya jadwal lari jam 06:00 WIB.</small><br>
+          <small class="text-muted fst-italic">2 hari lalu</small>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="py-3 border-top bg-light">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <small class="text-secondary mb-2 mb-md-0">&copy; 2026 FitFlow. Dibuat untuk kesehatan anda</small>
+      <div class="d-flex gap-3">
+        <a href="#" class="text-secondary text-decoration-none small">Kebijakan Privasi</a>
+        <a href="#" class="text-secondary text-decoration-none small">Syarat & Ketentuan</a>
+        <a href="#" class="text-secondary text-decoration-none small">Bantuan</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
